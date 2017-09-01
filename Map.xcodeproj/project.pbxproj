@@ -14,6 +14,7 @@
 		6260673E1F59A67100D211C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6260673C1F59A67100D211C9 /* LaunchScreen.storyboard */; };
 		626067491F59A67200D211C9 /* MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626067481F59A67200D211C9 /* MapTests.swift */; };
 		626067541F59A67200D211C9 /* MapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626067531F59A67200D211C9 /* MapUITests.swift */; };
+		626067631F59BE9C00D211C9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626067621F59BE9C00D211C9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6260674F1F59A67200D211C9 /* MapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		626067531F59A67200D211C9 /* MapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUITests.swift; sourceTree = "<group>"; };
 		626067551F59A67200D211C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626067621F59BE9C00D211C9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626067631F59BE9C00D211C9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				626067471F59A67200D211C9 /* MapTests */,
 				626067521F59A67200D211C9 /* MapUITests */,
 				626067311F59A67100D211C9 /* Products */,
+				626067611F59BE9C00D211C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				626067551F59A67200D211C9 /* Info.plist */,
 			);
 			path = MapUITests;
+			sourceTree = "<group>";
+		};
+		626067611F59BE9C00D211C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				626067621F59BE9C00D211C9 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +206,11 @@
 					6260672F1F59A67100D211C9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					626067431F59A67200D211C9 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -417,6 +434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Dinda.Map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Dinda.Map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -505,6 +524,7 @@
 				6260675A1F59A67200D211C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6260675B1F59A67200D211C9 /* Build configuration list for PBXNativeTarget "MapTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +533,7 @@
 				6260675D1F59A67200D211C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6260675E1F59A67200D211C9 /* Build configuration list for PBXNativeTarget "MapUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +542,7 @@
 				626067601F59A67200D211C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
